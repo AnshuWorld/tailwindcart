@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+    <style>
+        .imageshop img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+        <nav class="p-3 py-10 flex bg-black justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-lg">
+            <a href="#" id="brand" class="flex gap-2 items-center flex-1">
+                <img class="w-[140px] h-[70px] pl-3" src="logo2.png" alt="Logo">
+            </a>
+            <div id="nav-menu" class="hidden lg:flex gap-10 text-white">
+                <a href="#about" class="font-bold">About Us</a>
+                <a href="#electronics" class="font-bold">Electronics</a>
+                <a href="#gents" class="font-bold">Gents</a>
+                <a href="#ladies" class="font-bold">Ladies</a>
+                <a href="#kids" class="font-bold">Kids</a>
+                <a href="#kitchen" class="font-bold">Kitchen</a>
+                <a href="#total" class="font-bold">Total</a>
+            </div>
+            <div id="login" class="hidden lg:flex gap-5 text-white flex-1 justify-end pr-5">Login</div>
+            <button class="p-2 lg:hidden text-white" onclick="tog()">&#9776;</button>
+            <div id="nav-dialog" class="lg:hidden fixed z-10 bg-black text-white inset-0 p-3">
+                <div id="nav-bar" class="flex justify-between items-center">
+                    <a href="#" id="brand" class="flex gap-2 items-center justify-between">
+                        <img class="w-[100px]" src="logo2.png" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="tog()">  
+                        X
+                    </button>
+                </div>
+                <div class="mt-6 text-white">
+                    <a href="#about" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">About Us</a>
+                    <a href="#electronics" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Electronics</a>
+                    <a href="#gents" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Gents</a>
+                    <a href="#ladies" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Ladies</a>
+                    <a href="#kids" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Kids</a>
+                    <a href="#kitchen" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Kitchen</a>
+                    <a href="#total" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Total</a>
+                </div>
+        
+            </div>
+        
+        </nav><br/><br/><br /><br /><br /><br />
+        <div id="about" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">About Us</h1>
+        </div>
+        <div class="flex md:flex-row flex-col mx-auto">
+            <div class="basis-[55%]">
+                <img src="about1.png" alt="imageshop" class="w-full p-5">
+            </div>
+            <div class="basis-[45%] p-5">
+                <h1 class="font-bold text-4xl pb-7">Lorem ipsum dolor sit</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere a assumenda temporibus dignissimos magnam? Laborum, nulla non provident voluptate molestiae at, quasi reprehenderit voluptatem nobis, aliquam impedit magni vel. Animi maxime doloremque, pariatur, quidem magnam praesentium voluptatibus hic tempora cupiditate nam voluptates sed quam alias provident optio architecto aut, ab dolores eum quia libero distinctio. Perspiciatis, ad! Explicabo possimus consequuntur blanditiis in officia, vel, quisquam maiores debitis quaerat doloremque magnam, vitae harum soluta illo asperiores! Amet et distinctio incidunt tempora quas nesciunt, dignissimos dicta cupiditate quibusdam adipisci. Sit dicta nobis eos quis facere reprehenderit a quia incidunt dolores, eligendi, similique deleniti iusto temporibus magni vel perferendis quas mollitia veniam, cupiditate odio est ex qui soluta aut? Perferendis vel magnam obcaecati. Provident eveniet velit unde consequuntur, magnam quibusdam laboriosam harum perferendis reiciendis sit, dolorem, atque maxime a laborum placeat. Itaque qui consequatur delectus quo, tenetur praesentium ex? Maxime nulla deleniti, mollitia sequi fugit fuga in id itaque culpa error libero expedita ipsam veniam officiis nemo enim pariatur unde nam recusandae quae quod voluptate repellendus beatae. Eum aliquid, voluptatum dolores consequatur commodi officiis vitae dolor, excepturi, eius molestiae at culpa adipisci earum quia ab nesciunt? Sequi dicta praesentium iusto nisi odio provident repellendus.</p>
+            </div>
+        </div>
+        <div id="electronics" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Electronics Gadgets</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p1.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p2.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p3.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p4.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p5.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p6.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p7.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="p8.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>    
+        </div>
+        <div id="gents" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Gents Fashions</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="ladies" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Ladies Fashions</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="kid" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Kids Fashions</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="about.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="stationary" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Stationary Items</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s1.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s2.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s3.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s4.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s5.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s6.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="s7.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="kitchen" class="w-full h-95 mx-auto">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">Kitchen Tools</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k1.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k2.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k3.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k4.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k5.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k6.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <img src="k7.png" alt="imageshop" class="imageshop">
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">Produt Name</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button id="bttn" class="w-full bg-green-500 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="total" class="w-full h-95 mx-auto mt-21">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-3xl font-bold">Items Purchased: <span id="disp">0</span></h1>
+        </div>
+        <div id="ontent" class="grid lg:grid-cols-4 md:grid-cols-2 gap-10 bg-black text-white py-20 mt-8">
+            <div class="text-center">
+                <h1 class="font-bold">Address:</h1>
+                <Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>
+            </div>
+            <div class="text-center">
+                <h1 class="font-bold">Phone:</h1>
+                <Address class="text-center">+91 62067 53738</Address>
+            </div>
+            <div class="text-center">
+                <h1 class="font-bold">E-mail ID:</h1>
+                <Address class="text-center">bceamritkeshri@gmail.com</Address>
+            </div>
+            <div class="text-center">
+                <h1 class="font-bold">Address:</h1>
+                <Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>
+            </div>
+        </div>
+        <script>
+            var nava = document.getElementById('nav-dialog');
+            function tog()
+            {
+                nava.classList.toggle('hidden');
+            }
+            let ount = 0;
+            let btn = document.getElementsById("bttn");
+            let disp = document.getElementById("disp");
+            btn.onclick = function(){
+                ount++;
+                disp.innerHTML = ount;
+            }
+        </script>
+</body>
+</html>
