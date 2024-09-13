@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+    <style>
+        .imageshop img{
+            width: 500px;
+            height: 600px;
+        }
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        .form-container input[type=password]:focus,
+        textarea {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .form-container .btn {
+            background-color: #050505;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+        <nav class="p-3 py-10 flex bg-black justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
+            <a href="#" id="brand" class="flex gap-2 justify-between items-center flex-1"></a>
+                <img class="w-[140px] h-[70px] pl-3" src="p1.png" alt="Logo">
+            </a>
+            <div id="nav-menu" class="hidden lg:flex gap-10 text-white">
+                <a href="#about" class="font-bold">About Us</a>
+                <a href="#electronics" class="font-bold">Electronics</a>
+                <a href="#gents" class="font-bold">Gents</a>
+                <a href="#ladies" class="font-bold">Ladies</a>
+                <a href="#kids" class="font-bold">Kids</a>
+                <a href="#kitchen" class="font-bold">Kitchen</a>
+                <a href="#total" class="font-bold">Total</a>
+            </div>
+            <!--<div id="login" class="hidden lg:flex gap-5 text-white flex-1 justify-end pr-5">Login</div>-->
+            <button class="p-2 lg:hidden text-white md:flex-1 w-full flex justify-end" onclick="tog()">&#9776;</button>
+            <div id="nav-dialog" class="lg:hidden fixed z-10 bg-black text-white inset-0 p-3">
+                <div id="nav-bar" class="flex justify-between items-center">
+                    <a href="#" id="brand" class="flex gap-2 items-center justify-between">
+                        <img class="w-full h-[80px] flex justify-center items-center" src="p1.png" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="tog()">
+                        X
+                    </button>
+                </div>
+                <div class="mt-6 text-white">
+                    <a href="#about" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">About Us</a>
+                    <a href="#electronics" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Electronics</a>
+                    <a href="#gents" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Gents</a>
+                    <a href="#ladies" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Ladies</a>
+                    <a href="#kids" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Kids</a>
+                    <a href="#kitchen" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Kitchen</a>
+                    <a href="#total" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Total</a>
+                </div>
+            </div>
+        </nav><br/><br/><br /><br /><br /><br />
+        <div id="parallex" class="relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+            <!--<div class="relative z-30 p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">
+                    <a href="#about">Welcome To Our Restaurant</a>
+                    <button class="bg-orange-800 p-4 m-5 rounded font-bold hover:bg-green-500 hover:text-white duration-8000">Read More ..</button>
+                </div>-->
+            
+            <img src="a8.png" alt="" class="absolute z-1 w-full h-screen max-w-none">
+        </div>
+        <div id="about" class="w-full h-95">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">CATEGORIES</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="about" class="w-full h-95 flex lg:flex-row md:flex-col">
+            <h1 class="flex items-center justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">MENS KURTA</h1>
+            <button class="flex flex-1 w-full items-center justify-end">BUTTON</button>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="about" class="w-full h-95">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">LEHENGA</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="about" class="w-full h-95">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">KIDSWEAR</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="about" class="w-full h-95">
+            <h1 class="flex justify-center items-center py-7 text-white bg-blue-300 text-4xl font-bold">SAREES</h1>
+        </div>
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="shadow-lg rounded mx-auto my-5">
+                <div class="imageshop">
+                    <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+        <div id="ontent" class="grid lg:grid-cols-4 md:grid-cols-2 gap-10 bg-white text-black py-20">
+            <div class="p-5">
+                <h1 class="font-bold">SHOP:</h1><br />
+                <!--<Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>-->
+                <p>NEW ARRIVALS</p>
+                <p>SAREES</p>
+                <p>LEHENGA</p>
+                <p>OCCASION WEAR</p>
+                <p>CO-ORDS</p>
+                <p>KURTIS</p>
+                <p>MENSWEAR</p>
+                <p>SALE</p>
+                <p>UNDER Rs.250</p>
+            </div>
+            <div class="p-5">
+                <h1 class="font-bold">INFORMATION</h1><br />
+                <!--<Address class="text-center">+91 62067 53738</Address>-->
+                <p>ABOUT US</p>
+                <p>PRIVACY POLICY</p>
+                <p>SHIPPING POLICY</p>
+                <p>RETURNS AND EXCHANGE</p>
+                <p>TERMS OF SERVICE</p>
+                <p>CONTACT US</p>
+            </div>
+            <div class="p-5">
+                <h1 class="font-bold">CUSTOMER CARE</h1><BR />
+                <Address class="">Email: <u>bceamritkeshri@gmail.com</u></Address>
+                <Address class="">Phone: <u>+91 63589 65578</u></Address>
+            </div>
+            <div class="p-5">
+                <h1 class="font-bold">SIGN UP FOR AYNAA NEWS</h1>
+                <!--<Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>-->
+                <div class="form-popup" id="myForm">
+                    <form action="/action_page.php" class="form-container">
+                        <div class="flex">
+                            <span class="inline w-auto" style="width: 200px;">Stay informed about the latest style advice
+                                and product launches</span>
+                        </div>
+                        <br /><br />
+                        <label for="psw"><b>Name</b></label>
+                        <input type="text" placeholder="Your Full Name" name="psw" required>
+        
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
+        
+                        <button type="submit" class="btn bg-black text-white">SUBMIT</button>
+                        <!--<button type="button" class="btn cancel" onclick="closeForm()">CANCEL</button>-->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script>
+            const navDialog = document.getElementById('nav-dialog');
+            function tog() {
+                navDialog.classList.toggle('hidden');
+            }
+            function openForm() {
+                document.getElementById("myForm").style.display = "block";
+            }
+
+            function closeForm() {
+                document.getElementById("myForm").style.display = "none";
+            }
+        </script>
+</body>
+</html>
