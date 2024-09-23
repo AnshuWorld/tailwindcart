@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="output.css">
     <title>Document</title>
     <style>
+        .wrap{
+            display: flex;
+            overflow-x: auto;
+        }
+        .wrap::-webkit-scrollbar{
+            width: 0;
+        }
         .imageshop img {
             width: 500px;
             height: 600px;
@@ -94,8 +101,9 @@
 </head>
 
 <body>
+    <p class="py-5 flex bg-black text-white justify-center items-center fixed top-0 left-0 right-0 z-20 shadow-lg">End of Season Sale Live Now&nbsp; |&nbsp; Flat 24% off use Code: EOSS24&nbsp; |&nbsp; Extra 5% Off On Prepaid</p>
     <nav
-        class="p-3 py-10 flex bg-white text-black justify-between items-center fixed top-0 left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
+        class="mb-5 p-3 py-10 flex bg-white text-black justify-between items-center fixed top-[51px] left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
         <a href="#" id="brand" class="flex gap-2 justify-between items-center flex-1"></a>
         <img class="w-[140px] h-[100px] pl-3 pb-5" src="logo.png" alt="Logo">
         </a>
@@ -107,6 +115,14 @@
             <a href="#kid" class="font-bold">Kids</a>
             <a href="#saree" class="font-bold">Sarees</a>
             <a href="#contact" class="font-bold">Contact Us</a>
+            <select name="" id="">
+                
+                <option value="">IND </option>
+                <option value="">PAK</option>
+                <option value="">NEP</option>
+                <option value="">USA</option>
+            </select>
+            <input type="search" name="" id="" style="border: 1px solid black; padding: 2px;">
         </div>
         <!--<div id="login" class="hidden lg:flex gap-5 text-white flex-1 justify-end pr-5">Login</div>-->
         <button class="p-2 lg:hidden text-black md:flex-1 w-full flex justify-end" onclick="tog()">&#9776;</button>
@@ -140,13 +156,75 @@
         <h1 class="flex justify-center items-center py-7 text-black bg-white text-4xl font-medium">SHOP BY CATEGORIES
         </h1>
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
-        <div class="shadow-lg rounded mx-auto my-5">
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p6.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#lehenga"><img src="b6.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kid"><img src="k1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#saree"><img src="a2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#lehenga"><img src="b2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2 ">
+        <div class="shadow-lg rounded mx-auto my-5 ">
             <div class="imageshop">
                 <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
                         class="imageshop"></a>
                 
 
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+        <div class="shadow-lg rounded mx-auto my-5 ">
+            <div class="imageshop">
+                <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
             </div>
             <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
             <p class="w-full text-xl flex justify-center items-center">Price</p>
@@ -179,185 +257,265 @@
             <p class="w-full text-xl flex justify-center items-center">Price</p>
             <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
         </div>
-    </div>
-    <div id="kurta" class="w-full h-95 flex lg:flex-col md:flex-row">
+    </div>-->
+    <div id="kurta" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
         <h1
             class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
             MENS KURTA</h1>
         <button class=" flex items-center justify-center bg-black text-white mt-5"
             style="width: 200px; height: 50px;">VIEW ALL</button>
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1709</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#gents"><img src="p2.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p2.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">YELLOW KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1599</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#ladies"><img src="p4.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p3.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">DESIGNER KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1099</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#kid"><img src="p5.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RED KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1399</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">DARKYELLOW KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 2099</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BROWN KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 2199</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
         </div>
     </div>
-    <div id="lehenga" class="w-full h-95 flex lg:flex-col md:flex-row">
+    <div id="lehenga" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
         <h1
             class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
             LEHENGA</h1>
         <button class=" flex items-center justify-center bg-black text-white mt-5"
             style="width: 200px; height: 50px;">VIEW ALL</button>
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#electronics"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MARATHI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 3999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#gents"><img src="a2.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a2.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">GUJARATI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 4299</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#ladies"><img src="a3.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a3.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RAJASHI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 100272</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#kid"><img src="a4.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 12999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LIGHTPINK LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1389</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RED LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1299</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
         </div>
     </div>
-    <div id="kid" class="w-full h-95 flex lg:flex-col md:flex-row">
+    <div id="kid" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
         <h1
             class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
             KIDSWEAR</h1>
         <button class=" flex items-center justify-center bg-black text-white mt-5"
             style="width: 200px; height: 50px;">VIEW ALL</button>
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#electronics"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#gents"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#ladies"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
         </div>
     </div>
-    <div id="saree" class="w-full h-95 flex lg:flex-col md:flex-row">
+    <div id="saree" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
         <h1
             class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
             SAREES</h1>
         <button class=" flex items-center justify-center bg-black text-white mt-5"
             style="width: 200px; height: 50px;">VIEW ALL</button>
     </div>
-    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2">
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#electronics"><img src="b1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">ORANGE SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 13999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#gents"><img src="b2.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b2.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">VIOLET SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 13592</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#ladies"><img src="b3.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b3.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BROWN SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 15263</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
-        </div>
-        <div class="shadow-lg rounded mx-auto my-5">
-            <div class="imageshop">
-                <a href="#kid"><img src="b5.png" style="width: 500px; height: 500px;" alt="imageshop"
-                        class="imageshop"></a>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 18699</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
-            <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
-            <p class="w-full text-xl flex justify-center items-center">Price</p>
-            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">COLORFULL SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 17999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">PINK SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 16998</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
         </div>
     </div>
     <div id="contact" class="grid lg:grid-cols-4 md:grid-cols-2 gap-10 bg-white text-black py-20">
