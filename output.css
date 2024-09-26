@@ -1,1078 +1,601 @@
-/*
-! tailwindcss v3.4.10 | MIT License | https://tailwindcss.com
-*/
-
-/*
-1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
-2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
-*/
-
-*,
-::before,
-::after {
-  box-sizing: border-box;
-  /* 1 */
-  border-width: 0;
-  /* 2 */
-  border-style: solid;
-  /* 2 */
-  border-color: #e5e7eb;
-  /* 2 */
-}
-
-::before,
-::after {
-  --tw-content: '';
-}
-
-/*
-1. Use a consistent sensible line-height in all browsers.
-2. Prevent adjustments of font size after orientation changes in iOS.
-3. Use a more readable tab size.
-4. Use the user's configured `sans` font-family by default.
-5. Use the user's configured `sans` font-feature-settings by default.
-6. Use the user's configured `sans` font-variation-settings by default.
-7. Disable tap highlights on iOS
-*/
-
-html,
-:host {
-  line-height: 1.5;
-  /* 1 */
-  -webkit-text-size-adjust: 100%;
-  /* 2 */
-  -moz-tab-size: 4;
-  /* 3 */
-  -o-tab-size: 4;
-     tab-size: 4;
-  /* 3 */
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  /* 4 */
-  font-feature-settings: normal;
-  /* 5 */
-  font-variation-settings: normal;
-  /* 6 */
-  -webkit-tap-highlight-color: transparent;
-  /* 7 */
-}
-
-/*
-1. Remove the margin in all browsers.
-2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
-*/
-
-body {
-  margin: 0;
-  /* 1 */
-  line-height: inherit;
-  /* 2 */
-}
-
-/*
-1. Add the correct height in Firefox.
-2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
-3. Ensure horizontal rules are visible by default.
-*/
-
-hr {
-  height: 0;
-  /* 1 */
-  color: inherit;
-  /* 2 */
-  border-top-width: 1px;
-  /* 3 */
-}
-
-/*
-Add the correct text decoration in Chrome, Edge, and Safari.
-*/
-
-abbr:where([title]) {
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
-}
-
-/*
-Remove the default font size and weight for headings.
-*/
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-/*
-Reset links to optimize for opt-in styling instead of opt-out.
-*/
-
-a {
-  color: inherit;
-  text-decoration: inherit;
-}
-
-/*
-Add the correct font weight in Edge and Safari.
-*/
-
-b,
-strong {
-  font-weight: bolder;
-}
-
-/*
-1. Use the user's configured `mono` font-family by default.
-2. Use the user's configured `mono` font-feature-settings by default.
-3. Use the user's configured `mono` font-variation-settings by default.
-4. Correct the odd `em` font sizing in all browsers.
-*/
-
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  /* 1 */
-  font-feature-settings: normal;
-  /* 2 */
-  font-variation-settings: normal;
-  /* 3 */
-  font-size: 1em;
-  /* 4 */
-}
-
-/*
-Add the correct font size in all browsers.
-*/
-
-small {
-  font-size: 80%;
-}
-
-/*
-Prevent `sub` and `sup` elements from affecting the line height in all browsers.
-*/
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
-2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
-3. Remove gaps between table borders by default.
-*/
-
-table {
-  text-indent: 0;
-  /* 1 */
-  border-color: inherit;
-  /* 2 */
-  border-collapse: collapse;
-  /* 3 */
-}
-
-/*
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-3. Remove default padding in all browsers.
-*/
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  /* 1 */
-  font-feature-settings: inherit;
-  /* 1 */
-  font-variation-settings: inherit;
-  /* 1 */
-  font-size: 100%;
-  /* 1 */
-  font-weight: inherit;
-  /* 1 */
-  line-height: inherit;
-  /* 1 */
-  letter-spacing: inherit;
-  /* 1 */
-  color: inherit;
-  /* 1 */
-  margin: 0;
-  /* 2 */
-  padding: 0;
-  /* 3 */
-}
-
-/*
-Remove the inheritance of text transform in Edge and Firefox.
-*/
-
-button,
-select {
-  text-transform: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Remove default button styles.
-*/
-
-button,
-input:where([type='button']),
-input:where([type='reset']),
-input:where([type='submit']) {
-  -webkit-appearance: button;
-  /* 1 */
-  background-color: transparent;
-  /* 2 */
-  background-image: none;
-  /* 2 */
-}
-
-/*
-Use the modern Firefox focus style for all focusable elements.
-*/
-
-:-moz-focusring {
-  outline: auto;
-}
-
-/*
-Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
-*/
-
-:-moz-ui-invalid {
-  box-shadow: none;
-}
-
-/*
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-
-progress {
-  vertical-align: baseline;
-}
-
-/*
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/*
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-
-[type='search'] {
-  -webkit-appearance: textfield;
-  /* 1 */
-  outline-offset: -2px;
-  /* 2 */
-}
-
-/*
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/*
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to `inherit` in Safari.
-*/
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button;
-  /* 1 */
-  font: inherit;
-  /* 2 */
-}
-
-/*
-Add the correct display in Chrome and Safari.
-*/
-
-summary {
-  display: list-item;
-}
-
-/*
-Removes the default spacing and border for appropriate elements.
-*/
-
-blockquote,
-dl,
-dd,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-figure,
-p,
-pre {
-  margin: 0;
-}
-
-fieldset {
-  margin: 0;
-  padding: 0;
-}
-
-legend {
-  padding: 0;
-}
-
-ol,
-ul,
-menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-/*
-Reset default styling for dialogs.
-*/
-
-dialog {
-  padding: 0;
-}
-
-/*
-Prevent resizing textareas horizontally by default.
-*/
-
-textarea {
-  resize: vertical;
-}
-
-/*
-1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
-2. Set the default placeholder color to the user's configured gray 400 color.
-*/
-
-input::-moz-placeholder, textarea::-moz-placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-input::placeholder,
-textarea::placeholder {
-  opacity: 1;
-  /* 1 */
-  color: #9ca3af;
-  /* 2 */
-}
-
-/*
-Set the default cursor for buttons.
-*/
-
-button,
-[role="button"] {
-  cursor: pointer;
-}
-
-/*
-Make sure disabled buttons don't get the pointer cursor.
-*/
-
-:disabled {
-  cursor: default;
-}
-
-/*
-1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
-2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
-   This can trigger a poorly considered lint error in some tools but is included by design.
-*/
-
-img,
-svg,
-video,
-canvas,
-audio,
-iframe,
-embed,
-object {
-  display: block;
-  /* 1 */
-  vertical-align: middle;
-  /* 2 */
-}
-
-/*
-Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
-*/
-
-img,
-video {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Make elements with the HTML hidden attribute stay hidden by default */
-
-[hidden] {
-  display: none;
-}
-
-*, ::before, ::after {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
-
-::backdrop {
-  --tw-border-spacing-x: 0;
-  --tw-border-spacing-y: 0;
-  --tw-translate-x: 0;
-  --tw-translate-y: 0;
-  --tw-rotate: 0;
-  --tw-skew-x: 0;
-  --tw-skew-y: 0;
-  --tw-scale-x: 1;
-  --tw-scale-y: 1;
-  --tw-pan-x:  ;
-  --tw-pan-y:  ;
-  --tw-pinch-zoom:  ;
-  --tw-scroll-snap-strictness: proximity;
-  --tw-gradient-from-position:  ;
-  --tw-gradient-via-position:  ;
-  --tw-gradient-to-position:  ;
-  --tw-ordinal:  ;
-  --tw-slashed-zero:  ;
-  --tw-numeric-figure:  ;
-  --tw-numeric-spacing:  ;
-  --tw-numeric-fraction:  ;
-  --tw-ring-inset:  ;
-  --tw-ring-offset-width: 0px;
-  --tw-ring-offset-color: #fff;
-  --tw-ring-color: rgb(59 130 246 / 0.5);
-  --tw-ring-offset-shadow: 0 0 #0000;
-  --tw-ring-shadow: 0 0 #0000;
-  --tw-shadow: 0 0 #0000;
-  --tw-shadow-colored: 0 0 #0000;
-  --tw-blur:  ;
-  --tw-brightness:  ;
-  --tw-contrast:  ;
-  --tw-grayscale:  ;
-  --tw-hue-rotate:  ;
-  --tw-invert:  ;
-  --tw-saturate:  ;
-  --tw-sepia:  ;
-  --tw-drop-shadow:  ;
-  --tw-backdrop-blur:  ;
-  --tw-backdrop-brightness:  ;
-  --tw-backdrop-contrast:  ;
-  --tw-backdrop-grayscale:  ;
-  --tw-backdrop-hue-rotate:  ;
-  --tw-backdrop-invert:  ;
-  --tw-backdrop-opacity:  ;
-  --tw-backdrop-saturate:  ;
-  --tw-backdrop-sepia:  ;
-  --tw-contain-size:  ;
-  --tw-contain-layout:  ;
-  --tw-contain-paint:  ;
-  --tw-contain-style:  ;
-}
-
-.container {
-  width: 100%;
-}
-
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
-
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
-
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
-}
-
-.visible {
-  visibility: visible;
-}
-
-.collapse {
-  visibility: collapse;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.absolute {
-  position: absolute;
-}
-
-.relative {
-  position: relative;
-}
-
-.inset-0 {
-  inset: 0px;
-}
-
-.left-0 {
-  left: 0px;
-}
-
-.right-0 {
-  right: 0px;
-}
-
-.top-0 {
-  top: 0px;
-}
-
-.top-\[51px\] {
-  top: 51px;
-}
-
-.z-10 {
-  z-index: 10;
-}
-
-.z-20 {
-  z-index: 20;
-}
-
-.z-30 {
-  z-index: 30;
-}
-
-.m-3 {
-  margin: 0.75rem;
-}
-
-.m-5 {
-  margin: 1.25rem;
-}
-
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.my-5 {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
-}
-
-.mb-5 {
-  margin-bottom: 1.25rem;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.block {
-  display: block;
-}
-
-.inline {
-  display: inline;
-}
-
-.flex {
-  display: flex;
-}
-
-.table {
-  display: table;
-}
-
-.grid {
-  display: grid;
-}
-
-.contents {
-  display: contents;
-}
-
-.hidden {
-  display: none;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[50px\] {
-  height: 50px;
-}
-
-.h-\[80px\] {
-  height: 80px;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
-.w-\[140px\] {
-  width: 140px;
-}
-
-.w-\[400px\] {
-  width: 400px;
-}
-
-.w-auto {
-  width: auto;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.max-w-none {
-  max-width: none;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
-}
-
-.flex-none {
-  flex: none;
-}
-
-.border-collapse {
-  border-collapse: collapse;
-}
-
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.resize {
-  resize: both;
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-4 {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.flex-col {
-  flex-direction: column;
-}
-
-.items-center {
-  align-items: center;
-}
-
-.justify-end {
-  justify-content: flex-end;
-}
-
-.justify-center {
-  justify-content: center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.gap-10 {
-  gap: 2.5rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
-}
-
-.space-x-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.overflow-x-scroll {
-  overflow-x: scroll;
-}
-
-.rounded {
-  border-radius: 0.25rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
-.border {
-  border-width: 1px;
-}
-
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
-.bg-blue-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
-}
-
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(156 163 175 / var(--tw-bg-opacity));
-}
-
-.bg-gray-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
-
-.bg-green-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
-.bg-orange-800 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(154 52 18 / var(--tw-bg-opacity));
-}
-
-.bg-purple-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(216 180 254 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
-}
-
-.p-2 {
-  padding: 0.5rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
-}
-
-.p-4 {
-  padding: 1rem;
-}
-
-.p-5 {
-  padding: 1.25rem;
-}
-
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-7 {
-  padding-top: 1.75rem;
-  padding-bottom: 1.75rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
-.pb-7 {
-  padding-bottom: 1.75rem;
-}
-
-.pl-3 {
-  padding-left: 0.75rem;
-}
-
-.pr-5 {
-  padding-right: 1.25rem;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
-}
-
-.font-medium {
-  font-weight: 500;
-}
-
-.text-black {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-white {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.underline {
-  text-decoration-line: underline;
-}
-
-.shadow-lg {
-  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
-.outline {
-  outline-style: solid;
-}
-
-.duration-1000 {
-  transition-duration: 1000ms;
-}
-
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.hover\:bg-blue-200:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(191 219 254 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-green-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(34 197 94 / var(--tw-bg-opacity));
-}
-
-.hover\:bg-red-500:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
-.hover\:text-black:hover {
-  --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-@media (min-width: 768px) {
-  .md\:hidden {
-    display: none;
-  }
-
-  .md\:flex-1 {
-    flex: 1 1 0%;
-  }
-
-  .md\:grid-cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:flex-row {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lg\:flex {
-    display: flex;
-  }
-
-  .lg\:hidden {
-    display: none;
-  }
-
-  .lg\:grid-cols-4 {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
-  .lg\:pl-\[135px\] {
-    padding-left: 135px;
-  }
-}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="output.css">
+    <title>Document</title>
+    <style>
+        .wrap{
+            display: flex;
+            overflow-x: auto;
+        }
+        .wrap::-webkit-scrollbar{
+            width: 0;
+        }
+        .imageshop img {
+            width: 500px;
+            height: 600px;
+        }
+
+        .form-container {
+            max-width: 300px;
+            padding: 10px;
+            background-color: white;
+        }
+
+        .form-container input[type=text],
+        .form-container input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        .form-container input[type=password]:focus,
+        textarea {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        .form-container .btn {
+            background-color: #050505;
+            color: white;
+            padding: 16px 20px;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            margin-bottom: 10px;
+            opacity: 0.8;
+        }
+
+        .form-container .cancel {
+            background-color: red;
+        }
+
+        .form-container .btn:hover,
+        .open-button:hover {
+            opacity: 1;
+        }
+
+        .image {
+            background-image: url('s4.png');
+            animation: changeImage 10s infinite;
+        }
+
+        @keyframes changeImage {
+            1% {
+                background-image: url('girl.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            50% {
+                background-image: url('cor.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+
+            100% {
+                background-image: url('child.png');
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: cover;
+            }
+        }
+
+        .sale {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: darksalmon;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="py-2 flex bg-black text-white justify-center items-center top-0 left-0 right-0 z-20 shadow-lg text-sm"><marquee behavior="" direction="">End of Season Sale Live Now&nbsp; |&nbsp; Flat 24% off use Code: EOSS24&nbsp; |&nbsp; Extra 5% Off On Prepaid</marquee></p>
+    <nav
+        class="p-3 py-10 flex bg-white text-black justify-between items-center mt-9 left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
+        <a href="#" id="brand" class="flex gap-2 justify-between sm:justify-end items-center flex-1"></a>
+        <img class="w-[140px] h-[100px] pl-3 pb-5" src="logo.png" alt="Logo">
+        </a>
+        <div id="nav-menu" class="hidden lg:flex gap-10 text-black">
+            <a href="#about" class="font-bold">About Us</a>
+            <a href="#cat" class="font-bold">Categories</a>
+            <a href="#kurta" class="font-bold">Mens Kurta</a>
+            <a href="#lehenga" class="font-bold">Lehenga</a>
+            <a href="#kid" class="font-bold">Kids</a>
+            <a href="#saree" class="font-bold">Sarees</a>
+            <a href="#contact" class="font-bold">Contact Us</a>
+            <select name="" id="">
+                
+                <option value="">IND </option>
+                <option value="">PAK</option>
+                <option value="">NEP</option>
+                <option value="">USA</option>
+            </select>
+            <input type="search" name="" id="" style="border: 1px solid black; padding: 2px;">
+        </div>
+        <!--<div id="login" class="hidden lg:flex gap-5 text-white flex-1 justify-end pr-5">Login</div>-->
+        <button class="p-2 lg:hidden text-black md:flex-1 w-full flex justify-start" onclick="tog()">&#9776;</button>
+        <div id="nav-dialog" class="lg:hidden fixed z-10 bg-white text-black inset-0 p-3">
+            <div id="nav-bar" class="flex justify-between items-center">
+                <button class="ml-5 md:hidden text-2xl" onclick="tog()">
+                    x
+                </button>
+                <!--<a href="#" id="brand" class="flex gap-2 items-center justify-between">
+                    <img class="w-full h-[80px] flex justify-center items-center" src="logo.png" alt="Logo">
+                </a>-->
+                
+            </div>
+            <div class="mt-6 text-black">
+                <a href="#about" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">About Us</a>
+                <a href="#cat" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Categories</a>
+                <a href="#kurta" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Mens Kurta</a>
+                <a href="#lehenga" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Lehenga</a>
+                <a href="#kid" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Kids</a>
+                <a href="#saree" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Sarees</a>
+                <a href="#contact" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">Contact Us</a>
+            </div>
+        </div>
+    </nav><br /><br /><br /><br /><br /><br />
+    <div id="about" class="image relative flex items-center justify-center h-screen mb-12 overflow-hidden">
+        <!--<div class="relative z-30 p-5 text-2xl text-white bg-purple-300 bg-opacity-50 rounded-xl">
+                    <a href="#about">Welcome To Our Restaurant</a>
+                    <button class="bg-orange-800 p-4 m-5 rounded font-bold hover:bg-green-500 hover:text-white duration-8000">Read More ..</button>
+                </div>-->
+    </div>
+    <div id="cat" class="w-full h-95">
+        <h1 class="flex justify-center items-center py-7 text-black bg-white text-4xl font-medium">SHOP BY CATEGORIES
+        </h1>
+    </div>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p6.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#lehenga"><img src="b6.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kid"><img src="k1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#saree"><img src="a2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#lehenga"><img src="b2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="grid lg:grid-cols-4 md:grid-cols-2 mx-auto gap-2 ">
+        <div class="shadow-lg rounded mx-auto my-5 ">
+            <div class="imageshop">
+                <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                        class="imageshop"></a>
+                
+
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+        <div class="shadow-lg rounded mx-auto my-5 ">
+            <div class="imageshop">
+                <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop"></a>
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+        <div class="shadow-lg rounded mx-auto my-5">
+            <div class="imageshop">
+                <a href="#lehenga"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                        class="imageshop"></a>
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">LEHANGA</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+        <div class="shadow-lg rounded mx-auto my-5">
+            <div class="imageshop">
+                <a href="#saree"><img src="b7.png" style="width: 500px; height: 500px;" alt="imageshop"
+                        class="imageshop"></a>
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">SAREES</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+        <div class="shadow-lg rounded mx-auto my-5">
+            <div class="imageshop">
+                <a href="#kid"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                        class="imageshop"></a>
+            </div>
+            <h3 class="font-medium text-2xl flex justify-center items-center">KIDSWEAR</h3>
+            <p class="w-full text-xl flex justify-center items-center">Price</p>
+            <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+        </div>
+    </div>-->
+    <div id="kurta" class="w-full h-95 flex flex-col sm:ml-3 lg:pl-[135px]">
+        <h1
+            class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
+            MENS KURTA</h1>
+        <button class=" flex items-center justify-center bg-black text-white mt-5"
+            style="width: 200px; height: 50px;">VIEW ALL</button>
+    </div>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
+                </div>
+                
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1709</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">YELLOW KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1599</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p3.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">DESIGNER KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1099</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RED KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1399</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">DARKYELLOW KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 2099</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BROWN KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 2199</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div id="lehenga" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
+        <h1
+            class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
+            LEHENGA</h1>
+        <button class=" flex items-center justify-center bg-black text-white mt-5"
+            style="width: 200px; height: 50px;">VIEW ALL</button>
+    </div>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MARATHI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 3999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a2.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">GUJARATI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 4299</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a3.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RAJASHI LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 100272</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 12999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">LIGHTPINK LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1389</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="a6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">RED LEHENGA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 1299</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div id="kid" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
+        <h1
+            class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
+            KIDSWEAR</h1>
+        <button class=" flex items-center justify-center bg-black text-white mt-5"
+            style="width: 200px; height: 50px;">VIEW ALL</button>
+    </div>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">MENS KURTA</h3>
+                <p class="w-full text-xl flex justify-center items-center">Price</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div id="saree" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
+        <h1
+            class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
+            SAREES</h1>
+        <button class=" flex items-center justify-center bg-black text-white mt-5"
+            style="width: 200px; height: 50px;">VIEW ALL</button>
+    </div>
+    <div class="container mx-auto py-4">
+        <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">ORANGE SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 13999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b2.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">VIOLET SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 13592</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b3.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BROWN SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 15263</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b4.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">BLACK SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 18699</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b5.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">COLORFULL SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 17999</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+            <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
+                <div class="imageshop">
+                    <a href="#kurta"><img src="b6.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop"></a>
+                </div>
+                <h3 class="font-medium text-2xl flex justify-center items-center">PINK SAREE</h3>
+                <p class="w-full text-xl flex justify-center items-center">Rs. 16998</p>
+                <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
+            </div>
+        </div>
+    </div>
+    <div id="contact" class="grid lg:grid-cols-4 md:grid-cols-2 gap-10 bg-white text-black py-20">
+        <div class="p-5">
+            <h1 class="font-bold">SHOP:</h1><br />
+            <!--<Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>-->
+            <p>NEW ARRIVALS</p>
+            <p>SAREES</p>
+            <p>LEHENGA</p>
+            <p>OCCASION WEAR</p>
+            <p>CO-ORDS</p>
+            <p>KURTIS</p>
+            <p>MENSWEAR</p>
+            <p>SALE</p>
+            <p>UNDER Rs.250</p>
+        </div>
+        <div class="p-5">
+            <h1 class="font-bold">INFORMATION</h1><br />
+            <!--<Address class="text-center">+91 62067 53738</Address>-->
+            <p>ABOUT US</p>
+            <p>PRIVACY POLICY</p>
+            <p>SHIPPING POLICY</p>
+            <p>RETURNS AND EXCHANGE</p>
+            <p>TERMS OF SERVICE</p>
+            <p>CONTACT US</p>
+        </div>
+        <div class="p-5">
+            <h1 class="font-bold">CUSTOMER CARE</h1><BR />
+            <Address class="">Email: <u>bceamritkeshri@gmail.com</u></Address>
+            <Address class="">Phone: <u>+91 63589 65578</u></Address>
+        </div>
+        <div class="p-5">
+            <h1 class="font-bold">SIGN UP FOR AYNAA NEWS</h1>
+            <!--<Address class="text-center">Bungalow No. 56,Barailley Road, Patliputra, Patna, Bihar</Address>-->
+            <div class="form-popup" id="myForm">
+                <form action="/action_page.php" class="form-container">
+                    <div class="flex">
+                        <span class="inline w-auto" style="width: 200px;">Stay informed about the latest style advice
+                            and product launches</span>
+                    </div>
+                    <br /><br />
+                    <label for="psw"><b>Name</b></label>
+                    <input type="text" placeholder="Your Full Name" name="psw" required>
+
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <button type="submit" class="btn bg-black text-white">SUBMIT</button>
+                    <!--<button type="button" class="btn cancel" onclick="closeForm()">CANCEL</button>-->
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const navDialog = document.getElementById('nav-dialog');
+        function tog() {
+            navDialog.classList.toggle('hidden');
+        }
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
