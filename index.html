@@ -101,10 +101,10 @@
 </head>
 
 <body>
-    <p class="py-5 flex bg-black text-white justify-center items-center fixed top-0 left-0 right-0 z-20 shadow-lg">End of Season Sale Live Now&nbsp; |&nbsp; Flat 24% off use Code: EOSS24&nbsp; |&nbsp; Extra 5% Off On Prepaid</p>
+    <p class="py-2 flex bg-black text-white justify-center items-center top-0 left-0 right-0 z-20 shadow-lg text-sm"><marquee behavior="" direction="">End of Season Sale Live Now&nbsp; |&nbsp; Flat 24% off use Code: EOSS24&nbsp; |&nbsp; Extra 5% Off On Prepaid</marquee></p>
     <nav
-        class="mb-5 p-3 py-10 flex bg-white text-black justify-between items-center fixed top-[51px] left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
-        <a href="#" id="brand" class="flex gap-2 justify-between items-center flex-1"></a>
+        class="p-3 py-10 flex bg-white text-black justify-between items-center mt-9 left-0 right-0 z-20 shadow-lg  lg:flex-col md:flex-row ">
+        <a href="#" id="brand" class="flex gap-2 justify-between sm:justify-end items-center flex-1"></a>
         <img class="w-[140px] h-[100px] pl-3 pb-5" src="logo.png" alt="Logo">
         </a>
         <div id="nav-menu" class="hidden lg:flex gap-10 text-black">
@@ -125,15 +125,16 @@
             <input type="search" name="" id="" style="border: 1px solid black; padding: 2px;">
         </div>
         <!--<div id="login" class="hidden lg:flex gap-5 text-white flex-1 justify-end pr-5">Login</div>-->
-        <button class="p-2 lg:hidden text-black md:flex-1 w-full flex justify-end" onclick="tog()">&#9776;</button>
+        <button class="p-2 lg:hidden text-black md:flex-1 w-full flex justify-start" onclick="tog()">&#9776;</button>
         <div id="nav-dialog" class="lg:hidden fixed z-10 bg-white text-black inset-0 p-3">
             <div id="nav-bar" class="flex justify-between items-center">
-                <a href="#" id="brand" class="flex gap-2 items-center justify-between">
-                    <img class="w-full h-[80px] flex justify-center items-center" src="logo.png" alt="Logo">
-                </a>
-                <button class="p-2 md:hidden" onclick="tog()">
-                    X
+                <button class="ml-5 md:hidden text-2xl" onclick="tog()">
+                    x
                 </button>
+                <!--<a href="#" id="brand" class="flex gap-2 items-center justify-between">
+                    <img class="w-full h-[80px] flex justify-center items-center" src="logo.png" alt="Logo">
+                </a>-->
+                
             </div>
             <div class="mt-6 text-black">
                 <a href="#about" class="font-medium m-3 p-3 block hover:bg-blue-200 hover:text-black">About Us</a>
@@ -258,7 +259,7 @@
             <button class="w-full bttn bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
         </div>
     </div>-->
-    <div id="kurta" class="w-full h-95 flex lg:flex-col md:flex-row lg:pl-[135px]">
+    <div id="kurta" class="w-full h-95 flex flex-col sm:ml-3 lg:pl-[135px]">
         <h1
             class="flex flex-1 items-center justify-between items-center py-7 text-black bg-white text-3xl font-medium w-full">
             MENS KURTA</h1>
@@ -268,27 +269,41 @@
     <div class="container mx-auto py-4">
         <div class="flex overflow-x-scroll scrolling-touch space-x-4 no-scrollbar">
             <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
-                <div class="imageshop">
-                    <a href="#kurta"><img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
-                            class="imageshop"></a>
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p1.png" style="width: 500px; height: 500px;" alt="imageshop"
+                            class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
                 </div>
+                
                 <h3 class="font-medium text-2xl flex justify-center items-center">BLACK KURTA</h3>
                 <p class="w-full text-xl flex justify-center items-center">Rs. 1709</p>
                 <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
             <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
-                <div class="imageshop">
-                    <a href="#kurta"><img src="p2.png" style="width: 500px; height: 500px;" alt="imageshop"
-                            class="imageshop"></a>
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p2.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
                 </div>
                 <h3 class="font-medium text-2xl flex justify-center items-center">YELLOW KURTA</h3>
                 <p class="w-full text-xl flex justify-center items-center">Rs. 1599</p>
                 <button class="bttn w-full bg-gray-400 text-white p-3 hover:bg-red-500 duration-1000">Purchase</button>
             </div>
             <div class="flex-none w-[400px] bg-white rounded-lg shadow-md p-4">
-                <div class="imageshop">
-                    <a href="#kurta"><img src="p3.png" style="width: 500px; height: 500px;" alt="imageshop"
-                            class="imageshop"></a>
+                <div class="imageshop relative">
+                    <a href="#kurta">
+                        <img src="p3.png" style="width: 500px; height: 500px;" alt="imageshop" class="imageshop relative">
+                        <div class="absolute inset-0 flex justify-start p-2 text-sm">
+                            <h2 class="text-2xl bg-pink-500 h-12 w-50 p-3">Sale</h2>
+                        </div>
+                    </a>
                 </div>
                 <h3 class="font-medium text-2xl flex justify-center items-center">DESIGNER KURTA</h3>
                 <p class="w-full text-xl flex justify-center items-center">Rs. 1099</p>
